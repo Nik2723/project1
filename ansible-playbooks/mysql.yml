@@ -1,0 +1,20 @@
+- name: Play1 - install mysql server on ubuntu"
+  hosts: testing
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: run apt update
+      apt:
+        update_cache: true
+    - name: install mysql server
+      apt:
+        name: mysql-server
+        state: present
+    - name: restart mysql server
+      systemd:
+        name: mysql
+        state: restarted
+
+
+      
