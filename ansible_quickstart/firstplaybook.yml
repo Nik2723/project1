@@ -1,0 +1,9 @@
+---
+- name: my first play
+  hosts: apache
+  tasks:
+    - name: ping my hosts
+      ping:
+    - name: print message
+      debug:
+        msg: Hello World, this is first playbook

@@ -1,0 +1,12 @@
+[myhosts]
+16.170.247.44
+13.53.205.49
+[apache]
+16.170.247.44
+[nginx]
+13.53.205.49
+[Production:children]
+apache
+
+[dev:children]
+nginx

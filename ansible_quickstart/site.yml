@@ -1,0 +1,22 @@
+--- 
+- name: install and start apache HTTPD
+  hosts: apache
+  become: yes
+  tasks:
+   - name:  install apache2 
+     apt:
+       name: apache2
+       update_cache: yes
+       state: latest
+   - name: start apache service
+     service:
+       name: apache2
+       state: started
+       enabled: true
+     register: service_status
+       
+   - name: print apache2 service status
+     debug:
+       msg: "{{ service_status.state }}"
+
+
