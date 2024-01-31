@@ -1,1 +1,2 @@
-**/.terraform/*
+#**/.terraform/*
+/home/ubuntu/git-repo/project1/terraform-labs/.terraform/*
