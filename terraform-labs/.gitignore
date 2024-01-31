@@ -1,2 +1,5 @@
 #**/.terraform/*
 /home/ubuntu/git-repo/project1/terraform-labs/.terraform/*
+# .tfstate files
+*.tfstate
+*.tfstate.*
